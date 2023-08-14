@@ -10,7 +10,7 @@ app.use(cors());
 
 app.use(express.json({limit: '50mb'}));
 
-app.use("/server/record", records);
+app.use("/record", records);
 // start the Express server
 app.listen(PORT, () => {
   console.log(`Server is running on port: ${PORT}`);
