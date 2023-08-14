@@ -8,7 +8,9 @@ const router = express.Router();
 router.get("/", async (req, res) => {
   console.log("hello");
   let collection = await db.collection("recipes");
+  console.log(collection);
   let results = await collection.find({}).toArray();
+  console.log(results);
   res.send(results).status(200);
 });
 
